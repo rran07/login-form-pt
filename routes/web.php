@@ -21,3 +21,4 @@ Route::get('/projects', function () {
     return view('projects');
 });
 
+Route::view('/register', 'register');
