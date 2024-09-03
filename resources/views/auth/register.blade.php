@@ -16,25 +16,37 @@
                 <div>
                     <label for="first_name" class="block text-sm font-medium leading-6 text-gray-900">First Name</label>
                     <div class="mt-2">
-                        <input id="first_name" name="first_name" type="text" autocomplete="first_name" required
+                        <input id="first_name" name="first_name" type="text" autocomplete="first_name"
                             class="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                     </div>
+
+                    @error('first_name')
+                    <p class="text-red-600 font-semibold font-size text-xs my-1.5 px-2">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <div>
                     <label for="last_name" class="block text-sm font-medium leading-6 text-gray-900">Last Name</label>
                     <div class="mt-2">
-                        <input id="last_name" name="last_name" type="text" autocomplete="last_name" required
+                        <input id="last_name" name="last_name" type="text" autocomplete="last_name"
                             class="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                     </div>
+                    @error('last_name')
+                    <p class="text-red-600 font-semibold font-size text-xs my-1.5 px-2">{{ $message }}</p>
+                    @enderror
+
                 </div>
 
                 <div>
                     <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
                     <div class="mt-2">
-                        <input id="email" name="email" type="email" autocomplete="email" required
+                        <input id="email" name="email" type="email" autocomplete="email"
                             class="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                     </div>
+                    @error('email')
+                    <p class="text-red-600 font-semibold font-size text-xs my-1.5 px-2">{{ $message }}</p>
+                    @enderror
+
                 </div>
 
                 <div>
@@ -45,17 +57,26 @@
                         </div> --}}
                     </div>
                     <div class="mt-2">
-                        <input id="password" name="password" type="password" required
+                        <input id="password" name="password" type="password"
                             class="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        @error('password')
+                        <p class="text-red-600 font-semibold font-size text-xs my-1.5 px-2">{{ $message }}</p>
+                        @enderror
+
                     </div>
                 </div>
                 <div>
                     <div class="flex items-center justify-between">
-                        <label for="password_confirmation" class="block text-sm font-medium leading-6 text-gray-900">Password Confimation</label>
+                        <label for="password_confirmation"
+                            class="block text-sm font-medium leading-6 text-gray-900">Password Confimation</label>
                     </div>
                     <div class="mt-2">
-                        <input id="password_confirmation" name="password_confirmation" type="password" required
+                        <input id="password_confirmation" name="password_confirmation" type="password"
                             class="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        @error('password')
+                        <p class="text-red-600 font-semibold font-size text-xs my-1.5 px-2">{{ $message }}</p>
+                        @enderror
+
                     </div>
                 </div>
 
